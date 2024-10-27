@@ -1,0 +1,5 @@
+@install_readme
+simple_kes_requirements.txt #additional modules required to run 
+install_simple_kes.py #this file contains the code necessary to read the requirements.txt file and install necessary dependancies
+install_simple_kes.bat #This file runs the install_simple_kes.py file which will install the requirements into the venv folder (if found) or into the 'fallback_venv_path' which is "simple_kes_requirements". Move from the modules from fallback_venv_path to your venv folder if it does not install into "venv"
+Install the above files into the root folder where you have installed Stable Diffusion. It should be located in the same location as webui.bat.
