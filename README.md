@@ -152,14 +152,14 @@ Watchdog is a Python library that monitors file system events. It allows the pro
 
 ## How it Works
 1.	Configuration Watcher Setup:
-o	The program includes a ConfigWatcher class that extends Watchdog's FileSystemEventHandler. This class is responsible for monitoring the configuration file and reloading it when changes occur.
-o	A ConfigManagerYaml class loads the configuration initially and holds the configuration data. When Watchdog detects changes to the config file, the ConfigWatcher triggers the ConfigManagerYaml to reload the latest settings.
+	The program includes a ConfigWatcher class that extends Watchdog's FileSystemEventHandler. This class is responsible for monitoring the configuration file and reloading it when changes occur.
+	A ConfigManagerYaml class loads the configuration initially and holds the configuration data. When Watchdog detects changes to the config file, the ConfigWatcher triggers the ConfigManagerYaml to reload the latest settings.
 2.	Automatic Reloading:
-o	Once the scheduler starts, the program initializes Watchdog to observe changes in the config file directory.
-o	If a change is detected, Watchdog reloads the new configuration settings, updating the scheduler's parameters dynamically without requiring a program restart.
+	Once the scheduler starts, the program initializes Watchdog to observe changes in the config file directory.
+	If a change is detected, Watchdog reloads the new configuration settings, updating the scheduler's parameters dynamically without requiring a program restart.
 3.	Usage Example:
-o	Make any modifications to simple_kes_scheduler.yaml (such as adjusting sigma_min, sigma_max, or randomize settings).
-o	Save the file. Watchdog will automatically detect the change, and the new settings will take effect immediately.
+	Make any modifications to simple_kes_scheduler.yaml (such as adjusting sigma_min, sigma_max, or randomize settings).
+	Save the file. Watchdog will automatically detect the change, and the new settings will take effect immediately.
 
 ## Benefits of Watchdog
 •	Flexibility: Adjust parameters on the fly for experimentation or fine-tuning without stopping the image generation process.
