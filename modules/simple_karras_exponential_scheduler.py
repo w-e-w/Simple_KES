@@ -8,7 +8,7 @@ import random
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from datetime import datetime
-
+import warnings
 import os
 import logging
 from datetime import datetime
@@ -202,7 +202,7 @@ def simple_karras_exponential_scheduler(
     config = config_manager.load_config()
     scheduler_config = config.get('scheduler', {})
     if not scheduler_config:
-        raise ValueError("Scheduler configuration is missing from the config file.")
+        warnings.warn("Scheduler configuration is missing from the config file. Using default values.")
     
     # Global randomization flag
     global_randomize = scheduler_config.get('randomize', False)
