@@ -272,7 +272,7 @@ def simple_karras_exponential_scheduler(
     custom_logger.info(f"Default Config create {default_config}")
     config = config_manager.load_config().get('scheduler', {})
     if not config:
-        raise ValueError("Scheduler configuration is missing from the config file.")
+        warnings.warn("Scheduler configuration is missing from the config file.")
     
     # Log loaded YAML configuration
     custom_logger.info(f"Configuration loaded from YAML: {config}")
